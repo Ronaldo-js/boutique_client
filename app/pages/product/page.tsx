@@ -1,9 +1,9 @@
 const Product = ()=>{
-    return<><div className="dashboard-container">
-            <h1>Produits</h1>
-            <p>je suis le Dashboard page.tsx</p>
-        </div>
-    </>
+    return<> 
+            <div className="command-container">
+              <h1>Product</h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempore aut ex hic sequi nemo quo expedita libero excepturi ut quibusdam saepe, consectetur repellat dolor? Minus dignissimos quas hic odio!</p>
+            </div>
+      </>
 }
-
-Export default Product;
+export default Product;
