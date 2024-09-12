@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { SideBar } from "./components/sideBar";
+import { Header } from "./components/header";
+// import { useState } from 'react';
+
+
+import { FontAwesomeIcon } from "@/node_modules/@fortawesome/react-fontawesome/index";
+import { faThumbsUp } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
+
+const inter = Inter({ subsets: ["latin"] });
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <SideBar/>
+        <Header/>
         {children}
       </body>
     </html>
