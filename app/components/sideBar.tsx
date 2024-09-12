@@ -35,7 +35,7 @@ export function SideBar(){
                 <Link href={"/pages/analytic"}><li className='sideBar-items'><FontAwesomeIcon icon={faBarChart} className="fa-fw column-gap" />Analytics</li></Link>
                 <Link href={"/pages/transfer"}><li className='sideBar-items'><FontAwesomeIcon icon={faRotate} className="fa-fw column-gap" />Transferts</li></Link>
                 <Link href={"/pages/gift"}><li className='sideBar-items'><FontAwesomeIcon icon={faGift} className="fa-fw column-gap" />Cartes-cadeaux</li></Link>
-                <Link href={"/pages/clients"}><li className='sideBar-items'><FontAwesomeIcon icon={faUsers} className="fa-fw column-gap" />Clients</li></Link>
+                <Link href={"/pages/client"}><li className='sideBar-items'><FontAwesomeIcon icon={faUsers} className="fa-fw column-gap" />Clients</li></Link>
                 <Link href={"/pages/analysis"}><li className='sideBar-items'><FontAwesomeIcon icon={faChartPie} className="fa-fw column-gap" />Analyses de données</li></Link>
                 <Link href={"/pages/marketing"}><li className='sideBar-items'><FontAwesomeIcon icon={faBullseye} className="fa-fw column-gap" />Marketing</li></Link>
                 <Link href={"/pages/redurection"}><li className='sideBar-items'><FontAwesomeIcon icon={faPercentage} className="fa-fw column-gap" />Réductions</li></Link>
