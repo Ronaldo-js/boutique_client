@@ -1,12 +1,16 @@
 // import Image from "next/image";
 // import styles from "./page.module.css";
+import "./globals.css";
 
 export default function Home() {
   return (
     <div>
-      <main>
-        <h1>Accueil</h1>
-      </main>
+        <h1>Accueil</h1> 
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolore, id maiores aut delectus explicabo qui assumenda consectetur, 
+            libero minus consequatur odit? Sint corrupti autem fuga, aspernatur dolore est? Facere, architecto?
+          </p>
     </div>
   );
 }

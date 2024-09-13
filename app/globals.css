@@ -90,15 +90,41 @@ body {
 .logo-header{
   margin-top: 1rem;
 }
+.chevron-down{
+  position: absolute;
+  right: 4px;
+  top: 14px;
+}
 .sideBar ul li {
   /* margin-top: 1rem; */
+  position: relative;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
 }
 .sideBar ul li:hover{
+  /* background-color:#2e374a; */
+  color: var(--text-white);
+  font-weight: 550;
+}
+.sidebar-sub-menu:hover{
+  background-color: none;
+  color: var(--text-white);
+  font-weight: 550;
+}
+.active{
   background-color:#2e374a;
-  color: var(--text-white)
+  color: var(--text-white);
+  font-weight: bold;
+}
+.sidebar-sub-menu{
+  margin-left: 1.5rem;
+  color: var(--text-white-muted);
+}
+.active-sub{
+  /* background-color:#2e374a; */
+  color: var(--text-white);
+  font-weight: bold;
 }
 .sideBar-items{
   align-content: center;
@@ -106,6 +132,12 @@ body {
 }
 .espacement{
   height: 2vh;
+}
+
+.main-container{
+  
+  width: calc(100% - 270px);
+  margin-left: 270px; 
 }
 .header-container{
   margin-left: 260px;

@@ -8,7 +8,7 @@ export  function Header(){
                 
             </div>
             <div className="header-container">
-                <div className="header-left">Dashboard</div>
+                <div className="header-left">Accueil</div>
                 <div className="header-container-degree1">
                     <div className="parent-input-icon">
                         <input type="search" placeholder="search" className="search-input"/>
