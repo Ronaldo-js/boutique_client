@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./styles.header.css";
 // import { Header } from "./components/header";
 // import { useState } from 'react';
 
@@ -10,6 +11,7 @@ import { FontAwesomeIcon } from "@/node_modules/@fortawesome/react-fontawesome/i
 import { faThumbsUp } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
 import SideBar from "./components/SideBar";
 import { Header } from "./components/Header";
+import HeaderExemple from "./components/HeaderExemple";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,8 +40,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <HeaderExemple/>
         <SideBar/>
-        <Header/>
         <main  className="main-container">
           {children}
         </main>

@@ -1,15 +1,12 @@
-export default function buttonNav(){
-    return <>
-        <div className="button-nav">
-            <div className="title-page">Produits</div>
-            <div className="buttons-items">
-                <ul>
-                    <li>Export</li>
-                    <li>Import</li>
-                    <li>More actions</li>
-                    <li>Add ?"product"</li>
-                </ul>
-            </div>
-        </div>
-    </>
-}
+// components/Button.js
+import React from 'react';
+
+const Button = ({ label, onClick, type = 'button', className = '' }) => {
+  return (
+    <button type={type} className={`btn ${className}`} onClick={onClick}>
+      {label}
+    </button>
+  );
+};
+
+export default Button;

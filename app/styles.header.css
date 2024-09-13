@@ -1,0 +1,152 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-dark-1: #303030;
+    --bg-light: #F1F1F1;
+    --bg-light-1: #F7F7F7;
+    --bg-light-2: #EBEBEB;
+    --bg-white: #FFFFFF;
+    
+    --btn-primary: #333;
+    --btn-secondary: #E3E3E3;
+    --btn-light: #ffff;
+  
+    --text-dark-0: #000000;
+    --text-dark: #4a4a4a;
+    --text-dark-muted: #797979;
+    --text-white: #FFFFFF;
+    --text-white-muted: #d2d2d2;
+  
+    --background: #f1f1f1;
+    --forground: #ebebeb;
+    /* --background: #151c2d;
+    --foreground: #192237;
+    --text-white: #fafbfc;
+    --text-white-muted: #afafb5;
+    --text-success: #3e7d56;
+    --button-primary: #5d57c7;
+    --active-primary: #2e374a;
+    --button-secondary: #62728a;
+    --button-warning: #796d55; 
+    --button-danger: #834456; */
+  }
+
+
+/* Base header styles */
+
+.header {
+    z-index: 10001;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bg-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo-ferber{
+    align-items: start;
+}
+.menu-icon{
+    position:relative;
+}
+.icon-bars-item{
+    display: none;
+    position: absolute;
+    top: 14px;
+    left: 50px;
+}
+/* div vide */
+.design{
+    position: absolute;
+    background-color: var(--bg-dark);
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom:-1.5rem;
+}
+/* Menu icon (bars) on the left */
+.menu-icon {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-white-muted);
+}
+.container-position{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+/* Centered search bar */
+.search-bar {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+.icon-search-bar{
+    position: absolute;
+    top: 8px;
+    left: 362px;
+    color: var(--text-white-muted)
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 600px; /* You can adjust this */
+    padding: 10px 45px;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    background-color: var(--bg-dark-1);
+    color: var(--bg-light-2);
+    font-size: 16px;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Right section for notifications and profile */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    color: var(--text-white-muted);
+}
+
+/* Badge for notification count */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+/* Profile picture */
+.profile-pic {
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .search-bar input {
+        max-width: 100%;
+    }
+}

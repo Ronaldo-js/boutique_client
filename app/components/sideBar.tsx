@@ -142,18 +142,6 @@ const SideBar= ()=>{
             className="sideBar"
         >
             <ul>
-            <li  className='logo-header'>
-                <picture>
-                    <Image
-                        src={Logo}
-                        alt="Corten +"
-                        width={168}
-                        height={56}
-                        placeholder = 'blur'
-                        priority
-                    />
-                </picture>        
-            </li>
                 {items.map(item=>(
                    <SideBarItem key={item.path} item = {item}/>       
                 ))}

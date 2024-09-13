@@ -1,0 +1,123 @@
+/* Buttons Light */
+.btn-light {
+    background-color: #fff; /* Background color (dark gray/black) #CCCCCC*/
+    color: #333; /* White text */
+    padding: 10px 20px; /* Padding for a balanced button */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    box-shadow: 0 2px 4px rgba(198, 196, 196, 0.2); /* Box shadow to give it a raised effect */
+    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
+    color: #000;border:1px solid rgba(0, 0, 0, 0.09)
+}
+.btn-light:hover {
+    background-color: #f6f6f6;
+    color: #000;border:1px solid rgba(0, 0, 0, 0.09)
+}
+.btn-light:active {
+    transform: translateY(0); /* Reset to default when clicked */
+    background-color: #eaeaea; /* Even darker color when clicked */
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+}
+.btn-light:disabled {
+    background-color: rgb(169, 169, 169); /* Light gray for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    box-shadow: none; /* Remove shadow on disabled */
+    color:rgb(44, 44, 44)
+}
+/* Buttons Light */
+
+/* Buttons Secondary */
+.btn-secondary {
+    background-color: #ececec; /* Background color (dark gray/black) #CCCCCC*/
+    color: var(--text-dark-muted); /* White text */
+    padding: 10px 20px; /* Padding for a balanced button */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    box-shadow: 0 2px 4px rgba(77, 76, 76, 0.2); /* Box shadow to give it a raised effect */
+    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
+    border:1px solid rgba(25, 25, 25, 0.1)
+
+}
+.btn-secondary:hover {
+    background-color: #e3e3e3;
+    color: var(--text-dark-muted);
+    border:1px solid rgba(25, 25, 25, 0.1)
+
+}
+.btn-secondary:active {
+    transform: translateY(0); /* Reset to default when clicked */
+    background-color: #ececec; /* Even darker color when clicked */
+    border:1px solid rgba(25, 25, 25, 0.1)
+
+}
+.btn-secondary:disabled {
+    background-color: rgb(207, 203, 203); /* Light gray for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    box-shadow: none; /* Remove shadow on disabled */
+    color:#888
+}
+/* Buttons Secondary */
+
+/* Button base style */
+.btn-default {
+    background-color: #333; /* Background color (dark gray/black) */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for a balanced button */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow to give it a raised effect */
+    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
+    border:1px solid rgba(254, 254, 254, 0.09)
+}
+
+/* Hover effect */
+.btn-default:hover {
+    background-color: #000; /* Darker background on hover */
+    /* transform: translateY(-1px); Slight lift effect on hover */
+    border:1px solid rgba(254, 254, 254, 0.1)
+}
+
+/* Active state (when clicking) */
+.btn-default:active {
+    transform: translateY(0); /* Reset to default when clicked */
+    background-color: #222; /* Even darker color when clicked */
+    border:1px solid rgba(254, 254, 254, 0.12)
+
+}
+
+/* Disabled button */
+.btn-default:disabled {
+    background-color: #888; /* Light gray for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    box-shadow: none; /* Remove shadow on disabled */
+}
+/* Buttons Primary */
+
+/* For Components */
+.btn {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn.danger {
+    background-color: #e00;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  /* For Components */
