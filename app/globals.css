@@ -92,6 +92,13 @@ body {
   font-size: 16px;
   font-weight: 800;
 }
+.container-sales-channels{
+  margin-bottom: 2rem;
+}
+.espacement-sidebar{
+  margin-top: 2rem;
+  height: 50vh;
+}
 .sideBar {
   border-radius: 1.2rem 0rem 0rem 0rem;
   font-weight: 550;
@@ -103,6 +110,7 @@ body {
   position: fixed;
   font-size: 13px;
   z-index: 10001;
+  overflow:scroll;margin-bottom: 2rem;
 }
 .sideBar ul {
   list-style-type: none;
@@ -161,7 +169,9 @@ body {
 .espacement{
   height: 2vh;
 }
-
+section>div{
+  margin: 1rem 0;
+}
 .main-container{
   background-color: var(--bg-background);
   color: var(--bg-dark-1);

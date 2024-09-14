@@ -1,9 +1,10 @@
 const Analytic = ()=>{
     return<> 
-            <div className="analytic-container">
-              <h1>Analytic</h1>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempore aut ex hic sequi nemo quo expedita libero excepturi ut quibusdam saepe, consectetur repellat dolor? Minus dignissimos quas hic odio!</p>
-            </div>
+        <div className="analytic-container">
+          <div className="div-button-container">
+            <h1>Analytic</h1>
+          </div>
+        </div>
       </>
 }
 export default Analytic;

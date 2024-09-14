@@ -1,14 +1,15 @@
 "use client";
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { faBagShopping, faBullseye, faCartShopping, faHome, faPercent, faReceipt, faUser } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
+import { faBagShopping, faBullseye, faCartShopping, faHome, faPercent, faReceipt, faUser, faStoreAlt, faGear } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
 import React from 'react';
 import Logo from '../img/Corten.png';
 import { icon } from '@/node_modules/@fortawesome/fontawesome-svg-core/index';
-import { faBarChart } from '@/node_modules/@fortawesome/free-regular-svg-icons/index';
-import { FontAwesomeIconProps } from '@/node_modules/@fortawesome/react-fontawesome/index';
+import { faBarChart, faSadCry } from '@/node_modules/@fortawesome/free-regular-svg-icons/index';
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@/node_modules/@fortawesome/react-fontawesome/index';
 import Image from '@/node_modules/next/image';
 import SideBarItem from './SideBarItem';
+import { faAppStoreIos } from '@/node_modules/@fortawesome/free-brands-svg-icons/index';
 
 interface ISideBarItem{
     name: string;
@@ -146,6 +147,21 @@ const SideBar= ()=>{
                    <SideBarItem key={item.path} item = {item}/>       
                 ))}
             </ul>
+             <div className='espacement-sidebar'> {/* 50vh  */}
+                <div className="container-sales-channels">
+                    <h3>Sales Channels</h3>
+                    <ul>
+                        <li> <FontAwesomeIcon icon={faStoreAlt}/> Online Store</li>
+                        <li><FontAwesomeIcon icon={faAppStoreIos}/> Point of Sale</li>
+                    </ul>
+                </div>
+                <div className="container-apps">
+                    <h3>Apps</h3>
+                        <ul>
+                            <li><FontAwesomeIcon icon={faGear}/>Setting</li>
+                        </ul>
+                </div>
+            </div>
         </div>
     </>
     )
