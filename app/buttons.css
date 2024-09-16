@@ -1,15 +1,123 @@
+.pt-1{
+ padding-top: .2rem;
+}
+.pt-2{
+ padding-top: .4rem;
+}
+.pt-3{
+ padding-top: .6rem;
+}
+
+.pb-1{
+    padding-bottom: .2rem;
+   }
+.pb-2{
+    padding-bottom: .4rem;
+   }
+.pb-3{
+    padding-bottom: .6rem;
+   }
+
+.mt-1{
+ margin-top: .2rem;
+}
+.mt-2{
+ margin-top: .4rem;
+}
+.mt-3{
+ margin-top: .6rem;
+}
+
+.mb-1{
+ margin-bottom: .2rem;
+}
+.mb-2{
+ margin-bottom: .4rem;
+}
+.mb-3{
+ margin-bottom: .6rem;
+}
+
+/* .m{
+ margin: .2rem;
+}
+.m{
+ margin: .4rem;
+}
+.m{
+ margin: .6rem;
+} */
+
+.m-1{
+ margin: .1rem;
+}
+.m-2{
+ margin: .2rem;
+}
+.m-3{
+ margin: .3rem;
+}
+
+mx-1{
+    margi: .1rem
+}
+mx-2{
+    margi: .2rem
+}
+mx-3{
+    margi: .3rem
+}
+
+px-1{
+    padding: .1rem
+}
+px-2{
+    padding: .2rem
+}
+px-3{
+    padding: .3rem
+}
+
+pl-1{
+    padding-left: .1rem
+}
+pl-2{
+    padding-left: .2rem
+}
+pl-3{
+    padding-left: .3rem
+}
+
+pr-1{
+    padding-right: .1rem
+}
+pr-2{
+    padding-right: .2rem
+}
+pr-3{
+    padding-right: .3rem
+}
+
+
+.p-1{
+ padding: .1rem;
+}
+.p-2{
+ padding: .2rem;
+}
+.p-3{
+ padding: .3rem;
+}
 /* Buttons Light */
 .btn-light {
     background-color: #fff; /* Background color (dark gray/black) #CCCCCC*/
     color: #333; /* White text */
-    padding: 10px 20px; /* Padding for a balanced button */
-    border-radius: 5px; /* Rounded corners */
+    padding: 6px 11px; /* Padding for a balanced button */
+    border-radius: 0.4rem; /* Rounded corners */
     border: none; /* No border */
     font-size: 14px; /* Font size */
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    box-shadow: 0 2px 4px rgba(198, 196, 196, 0.2); /* Box shadow to give it a raised effect */
-    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
     color: #000;border:1px solid rgba(0, 0, 0, 0.09)
 }
 .btn-light:hover {
@@ -17,7 +125,7 @@
     color: #000;border:1px solid rgba(0, 0, 0, 0.09)
 }
 .btn-light:active {
-    transform: translateY(0); /* Reset to default when clicked */
+    transform: translateY(0); /* Reset to defaults when clicked */
     background-color: #eaeaea; /* Even darker color when clicked */
     color: #000;
     border: 1px solid rgba(0, 0, 0, 0.19);
@@ -34,25 +142,24 @@
 .btn-secondary {
     background-color: #ececec; /* Background color (dark gray/black) #CCCCCC*/
     color: var(--text-dark-muted); /* White text */
-    padding: 10px 20px; /* Padding for a balanced button */
-    border-radius: 5px; /* Rounded corners */
+    padding: 6px 10px; /* Padding for a balanced button */
+    border-radius: 0.4rem; /* Rounded corners */
     border: none; /* No border */
     font-size: 14px; /* Font size */
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    box-shadow: 0 2px 4px rgba(77, 76, 76, 0.2); /* Box shadow to give it a raised effect */
-    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
     border:1px solid rgba(25, 25, 25, 0.1)
 
 }
+
 .btn-secondary:hover {
-    background-color: #e3e3e3;
+    background-color: #cacaca;
     color: var(--text-dark-muted);
     border:1px solid rgba(25, 25, 25, 0.1)
 
 }
 .btn-secondary:active {
-    transform: translateY(0); /* Reset to default when clicked */
+    transform: translateY(0); /* Reset to defaults when clicked */
     background-color: #ececec; /* Even darker color when clicked */
     border:1px solid rgba(25, 25, 25, 0.1)
 
@@ -66,37 +173,34 @@
 /* Buttons Secondary */
 
 /* Button base style */
-.btn-default {
+.btn-defaults {
     background-color: #333; /* Background color (dark gray/black) */
     color: #fff; /* White text */
-    padding: 10px 20px; /* Padding for a balanced button */
-    border-radius: 5px; /* Rounded corners */
+    padding: 6px 10px; /* Padding for a balanced button */
+    border-radius: 0.4rem; /* Rounded corners */
     border: none; /* No border */
     font-size: 14px; /* Font size */
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow to give it a raised effect */
-    /* transition: background-color 0.3s ease, transform 0.1s ease; Transition for hover effects */
     border:1px solid rgba(254, 254, 254, 0.09)
 }
 
 /* Hover effect */
-.btn-default:hover {
+.btn-defaults:hover {
     background-color: #000; /* Darker background on hover */
-    /* transform: translateY(-1px); Slight lift effect on hover */
     border:1px solid rgba(254, 254, 254, 0.1)
 }
 
 /* Active state (when clicking) */
-.btn-default:active {
-    transform: translateY(0); /* Reset to default when clicked */
+.btn-defaults:active {
+    transform: translateY(0); /* Reset to defaults when clicked */
     background-color: #222; /* Even darker color when clicked */
     border:1px solid rgba(254, 254, 254, 0.12)
 
 }
 
 /* Disabled button */
-.btn-default:disabled {
+.btn-defaults:disabled {
     background-color: #888; /* Light gray for disabled state */
     cursor: not-allowed; /* Change cursor to indicate disabled */
     box-shadow: none; /* Remove shadow on disabled */
@@ -104,14 +208,14 @@
 /* Buttons Primary */
 
 /* For Components */
-.btn {
+/* .btn {
     padding: 10px 20px;
     background-color: #0070f3;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+  } */
   
   .btn.danger {
     background-color: #e00;
@@ -121,3 +225,6 @@
     opacity: 0.8;
   }
   /* For Components */
+.btn-chevron-down{
+    padding: 6px 15px;
+}

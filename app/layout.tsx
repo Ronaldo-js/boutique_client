@@ -10,8 +10,8 @@ import "./styles.header.css";
 import { FontAwesomeIcon } from "@/node_modules/@fortawesome/react-fontawesome/index";
 import { faThumbsUp } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
 import SideBar from "./components/SideBar";
-import { Header } from "./components/Header";
-import HeaderExemple from "./components/HeaderExemple";
+import HeaderExemple from "./components/Header";
+// import { Header } from "./components/Headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
