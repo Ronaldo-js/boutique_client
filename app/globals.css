@@ -227,6 +227,9 @@ pop-up-buttons>ul>li:nth-last-child():hover{
 .display-none-collapsed{
   display: none;
 }
+.display-none-collapsed.show{
+  display: block;
+} 
 .display-none{
   display: none;
  }
