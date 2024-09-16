@@ -228,3 +228,12 @@ pr-3{
 .btn-chevron-down{
     padding: 6px 15px;
 }
+.button-item{
+    position: relative;
+
+}
+.collapsable-menu{
+    position: absolute;
+    top: 2rem;
+    right: 6.4rem;
+}

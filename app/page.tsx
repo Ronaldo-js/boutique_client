@@ -6,9 +6,10 @@ import "./buttons.css";
 
 export default function Home() {
   return (
-    <div  className="body-heads-container">
-      <div>
-        <h1>Accueil</h1> 
+    <div  className="section-container">
+      <div className="">
+        <h2>Accueil</h2> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore in veritatis eos doloremque fuga, omnis aliquam similique quibusdam dolorem consectetur obcaecati corrupti nam labore cupiditate saepe cumque vero quasi?</p>
       </div>
     </div>
   );

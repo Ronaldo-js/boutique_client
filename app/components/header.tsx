@@ -6,6 +6,7 @@ import Ferber from '../img/ferber.svg';
 
 import Image from 'next/image';
 import { faSearch } from "@/node_modules/@fortawesome/free-solid-svg-icons/index";
+import ButtonToogle, { toggleMenu } from "./Button-toggle";
 
 const Header: React.FC = () => {
     const [notifications, setNotifications] = useState(1); // Example: 3 notifications
@@ -27,7 +28,7 @@ const Header: React.FC = () => {
                     </picture>        
                 </div>
                 <div className="icon-bars-item">
-                    <FontAwesomeIcon icon={faBars} size="lg" />
+                    <ButtonToogle />  
                 </div>
             </div>
 
