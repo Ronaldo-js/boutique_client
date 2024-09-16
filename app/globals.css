@@ -59,13 +59,13 @@
  }
  
  mx-1{
-     margi: .1rem
+     margin: .1rem
  }
  mx-2{
-     margi: .2rem
+     margin: .2rem
  }
  mx-3{
-     margi: .3rem
+     margin: .3rem
  }
  
  px-1{
@@ -108,6 +108,7 @@
  .p-3{
   padding: .3rem;
  }
+ 
 .body-heads-container{
   padding: 10px 0px 24px 0px;
 }

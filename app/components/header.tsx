@@ -55,6 +55,7 @@ const Header: React.FC = () => {
                     <span>A.R</span>
                     {/* <Image src="/profile-icon.png" alt="User Profile" width={40} height={40} /> */}
                 </div>
+                <div className="store-profile mx-1">A RStore</div>
             </div>
         </header>
     );

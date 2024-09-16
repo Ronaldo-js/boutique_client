@@ -152,7 +152,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--bg-dark-1);
+    background-color: var(--bg-dark);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .logo-ferber{
@@ -225,6 +225,7 @@
 .right-section {
     display: flex;
     align-items: center;
+    column-gap: 10px;
 }
 
 .notification-icon {
@@ -248,9 +249,11 @@
 
 /* Profile picture */
 .profile-pic {
-    border-radius: 50%;
+    border-radius: 25%;
     overflow: hidden;
+    padding: 10px;
     cursor: pointer;
+    background-color: #007bff;
 }
 
 .profile-pic img {
