@@ -1,0 +1,51 @@
+.tableWrapper {
+    margin: 20px 0px;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableCellHeader {
+    padding: 10px;
+    text-align: left;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tableCell {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product {
+    display: flex;
+    align-items: center;
+  }
+  
+  .productImage {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .statusActive {
+    background-color: #d4f8e8;
+    color: #27ae60;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .outOfStock {
+    color: #e74c3c;
+  }
+  
+  .input-checkbox input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+  }
+  

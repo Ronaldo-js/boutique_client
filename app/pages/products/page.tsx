@@ -6,6 +6,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect, useRef } from "react";
 import "../../buttons.css";
 import "../../globals.css";
+import ProductTable from "@/app/components/Product-table";
 
 const Product = () => {
   const [expanded, setExpanded] = useState(false);
@@ -74,6 +75,7 @@ const Product = () => {
             </div>
           </div>
         </div>
+        <ProductTable/>
       </div>
     </>
   );

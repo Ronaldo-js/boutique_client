@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import Font Awesome
 import { faBars, faBell } from "@fortawesome/free-solid-svg-icons"; // Import fa-bars and fa-bell icons
-import Ferber from '../img/ferber.svg';
+import Ferber from '../img/FERBER-ENTERPRISE.svg';
 
 import Image from 'next/image';
 import { faSearch } from "@/node_modules/@fortawesome/free-solid-svg-icons/index";
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                         <Image
                             src={Ferber}
                             alt="Shopify +"
-                            width={0}
+                            width={116}
                             height={36}
                             priority
                         />

@@ -108,7 +108,11 @@
  .p-3{
   padding: .3rem;
  }
- 
+ .learn-more-product{
+  
+  display: flex;
+  justify-content: center;
+ }
 .body-heads-container{
   padding: 10px 0px 24px 0px;
 }
