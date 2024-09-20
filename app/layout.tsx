@@ -2,8 +2,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import "./styles.header.css";
+import "./globals.css";
 import Button from './components/Button';
 import MenuContext from '../components/Menu-context';
 // import { Header } from "./components/header";

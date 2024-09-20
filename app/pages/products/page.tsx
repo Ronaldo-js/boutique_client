@@ -1,5 +1,5 @@
 'use client';
-import Button from "@/app/components/buttons-nav";
+import Button from "@/app/components/Buttons-nav";
 import ButtonPopUp from "@/app/components/Buttons-Pop-up";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -28,11 +28,11 @@ const Product = () => {
 
   useEffect(() => {
     // Ajoute un écouteur de clic sur tout le document
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     
     // Nettoie l'écouteur lors du démontage du composant
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, []);
 

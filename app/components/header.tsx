@@ -1,16 +1,44 @@
 'use client';
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import Font Awesome
 import { faBars, faBell } from "@fortawesome/free-solid-svg-icons"; // Import fa-bars and fa-bell icons
 import Ferber from '../img/FERBER-ENTERPRISE.svg';
 
 import Image from 'next/image';
-import { faSearch } from "@/node_modules/@fortawesome/free-solid-svg-icons/index";
-import ButtonToogle, { toggleMenu } from "./Button-toggle";
+import ButtonToogle from "./Button-toggle";
+import StoreButtonsComponent from "./Store-Buttons-component";
 
 const Header: React.FC = () => {
     const [notifications, setNotifications] = useState(1); // Example: 3 notifications
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const menuRef = useRef(null)
+    
+    const toggleMenu=()=> {
+        setIsMenuVisible(!isMenuVisible);
+    };
+    
+    // fonction pour masquer le menu
+    const hideMenu = () =>{
+        setIsMenuVisible(false)
+    }
+    
+    // Cacher le menu en cliquant en dehors de div
+    useEffect(()=>{
+        const handleClickOutside = (event) => {
+            // const menuElement = document.querySelector('.container-store_buttons_component');
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                hideMenu();
+            }
+        };
+        document.addEventListener('click', handleClickOutside); 
+        return ()=> {
+            document.removeEventListener('click', handleClickOutside)
+        };
+        
+    }, []);
 
+
+    
     return (
         <header className="header">
             <div className="design"></div>
@@ -43,7 +71,8 @@ const Header: React.FC = () => {
             </div>
 
             {/* Notifications and Profile on the right */}
-            <div className="right-section">
+            <div  ref={menuRef} className="right-section">
+                
                 {/* Notification bell */}
                 <div className="notification-icon">
                     <FontAwesomeIcon icon={faBell} size="lg" />
@@ -51,11 +80,18 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* User Profile picture */}
-                <div className="profile-pic">
-                    <span>A.R</span>
-                    {/* <Image src="/profile-icon.png" alt="User Profile" width={40} height={40} /> */}
+                <div onClick={toggleMenu} className="section-right-container flex">
+                    <div className="profile-pic">
+                        <span>A.R</span>
+                        {/* <Image src="/profile-icon.png" alt="User Profile" width={40} height={40} /> */}
+                    </div>
+                    <div className="store-profile mx-1">
+                        <p>A RStore</p>
+                    </div>
                 </div>
-                <div className="store-profile mx-1">A RStore</div>
+                <div className="container-store_buttons_component" >
+                    {isMenuVisible && <StoreButtonsComponent  hideMenu ={hideMenu}/>}
+                </div>
             </div>
         </header>
     );
