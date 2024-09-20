@@ -5,6 +5,7 @@ import "./globals.css";
 import "./buttons.css";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import HomeComponent from "./components/Home-component";
 
 
 export default function Home() {
@@ -24,12 +25,11 @@ export default function Home() {
   // }, []);
   
   return (
-    <div  className="section-container">
+    <div  className="section-container-home">
       <div className="">
         {/* <h1>Message du backend :</h1>
         <p>{message}</p> */}
-        <h2>Accueil</h2> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore in veritatis eos doloremque fuga, omnis aliquam similique quibusdam dolorem consectetur obcaecati corrupti nam labore cupiditate saepe cumque vero quasi?</p>
+        <HomeComponent/>
       </div>
     </div>
   );

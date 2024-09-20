@@ -1,4 +1,4 @@
-import ButtonPopUp from "@/app/components/Buttons-Pop-up";
+import ButtonPopUp from "@/app/components/Buttons-component-pop-up";
 
 
 const Customers = ()=>{

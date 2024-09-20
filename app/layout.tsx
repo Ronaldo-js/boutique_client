@@ -12,10 +12,10 @@ import MenuContext from '../components/Menu-context';
 
 import { FontAwesomeIcon } from "@/node_modules/@fortawesome/react-fontawesome/index";
 import { faThumbsUp } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
-import SideBar from "./components/SideBar";
-import Header from "./components/Header";
-import ButtonToogle from "./components/Button-toggle";
-import { MenuProvider } from "./components/SideBar-context";
+import SideBar from "./components/SideBar-component";
+import Header from "./components/Header-component";
+import ButtonToogle from "./components/Button-component-toggle";
+import { MenuProvider } from "./components/SideBar-component-context";
 // import { Header } from "./components/Headers";
 
 const inter = Inter({ subsets: ["latin"] });

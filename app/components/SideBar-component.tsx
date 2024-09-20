@@ -5,10 +5,10 @@ import { faBagShopping, faBullseye, faCartShopping, faHome, faPercent, faReceipt
 import React, { useContext, useState } from 'react';
 import { faBarChart, faSadCry } from '@/node_modules/@fortawesome/free-regular-svg-icons/index';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@/node_modules/@fortawesome/react-fontawesome/index';
-import SideBarItem from './SideBarItem';
+import SideBarItem from './SideBarItem-component';
 import { faAppStoreIos } from '@/node_modules/@fortawesome/free-brands-svg-icons/index';
-import Header from './Header';
-import { SideBarContext } from './SideBar-context';
+import Header from './Header-component';
+import { SideBarContext } from './SideBar-component-context';
 
 interface ISideBarItem{
     name: string;

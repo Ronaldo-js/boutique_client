@@ -4,7 +4,7 @@ import React, { useMemo, useState } from 'react';
 import { usePathname, useRouter } from '@/node_modules/next/navigation';
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@/node_modules/@fortawesome/react-fontawesome/index";
 import { faChevronDown, faChevronUp } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
-import SubMenuItem from './SubMenuItem';
+import SubMenuItem from './SubMenuItem-component';
 import { truncate } from 'fs';
 
 interface ISideBarItem {

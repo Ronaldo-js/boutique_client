@@ -1,12 +1,12 @@
 'use client';
-import Button from "@/app/components/Buttons-nav";
-import ButtonPopUp from "@/app/components/Buttons-Pop-up";
+import Button from "@/app/components/Buttons-component";
+import ButtonPopUp from "@/app/components/Buttons-component-pop-up";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect, useRef } from "react";
 import "../../buttons.css";
 import "../../globals.css";
-import ProductTable from "@/app/components/Product-table";
+import ProductTable from "@/app/components/Product-component-table";
 
 const Product = () => {
   const [expanded, setExpanded] = useState(false);
@@ -64,8 +64,11 @@ const Product = () => {
                   <Button className="btn-secondary m-1" label="Import" onClick={() => { /* Logique du bouton */ }} />
                 </div>
                 <div className="more_action">
-                  <Button className="btn-secondary m-1 pr-1 btn-chevron-down" label="More actions" onClick={() => { /* Logique du bouton */ }} />
-                  <FontAwesomeIcon className="FontAwesomeIcons" icon={faChevronDown} />
+                  <Button 
+                  className="btn-secondary m-1 pr-1 btn-chevron-down" 
+                  icon={faChevronDown}
+                  label=" More actions" 
+                  onClick={() => { /* Logique du bouton */ }} />
                 </div>
               </div>
 

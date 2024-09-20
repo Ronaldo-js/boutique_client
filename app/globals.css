@@ -237,9 +237,85 @@ pop-up-buttons>ul>li:nth-last-child():hover{
 .display-none{
   display: none;
  }
- html,
+
+@media screen and (max-width: 768px) {
+  
+  .header{
+    background-color: var(--bg-dark);
+  }
+  .icon-bars-item{
+    display: block;
+    
+  }
+  .logo-ferber
+  {
+    display: none;
+  }
+  .sideBar
+  {
+    display: none;
+  }
+  .design
+  {
+    display: none;
+  }
+  .main-container{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin-left: 0;
+    padding: 10px 0px 24px 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .header{
+    background-color: var(--bg-dark);
+  }
+  .icon-bars-item{
+    display: block;
+    
+  }
+  .logo-ferber
+  {
+    display: none;
+  }
+  .sideBar
+  {
+    display: none;
+  }
+  .design
+  {
+    display: none;
+  }
+  .main-container{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin-left: 0;
+    padding: 10px 0px 24px 0px;
+  }
+  .toggle-group-buttons{
+    display: none;
+  }
+  .display-none{
+    display: block;
+  }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-dark: #0a0a0a;
+    --foreground-white: #ededed;
+  }
+}
+
+html,
 body {
-  font-family: sans-serif;
+  font-family: Helvetica ;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -393,7 +469,8 @@ section>div{
   border-top: solid 1px var(--foreground);
   border-bottom: solid 1px var(--foreground);
 } */
-.section-container
+
+.section-container-home
 {
   width: calc(100% - 40px);
   margin: auto;
@@ -434,83 +511,13 @@ section>div{
   text-decoration: none;
   color: var(--text-white);
 }
-
-@media screen and (max-width: 768px) {
-  
-  .header{
-    background-color: var(--bg-dark);
-  }
-  .icon-bars-item{
-    display: block;
-    
-  }
-  .logo-ferber
-  {
-    display: none;
-  }
-  .sideBar
-  {
-    display: none;
-  }
-  .design
-  {
-    display: none;
-  }
-  .main-container{
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    margin-left: 0;
-    padding: 10px 0px 24px 0px;
-  }
+/* BODY BASE */
+.section-container-base{
+  width: calc(100% - 40px);
+  margin: auto;
+  margin-top: 5rem;
 }
+/* Body Home */
+.body__home-container{
 
-
-/* BODY HOME */
-
-
-@media screen and (max-width: 600px) {
-  
-  .header{
-    background-color: var(--bg-dark);
-  }
-  .icon-bars-item{
-    display: block;
-    
-  }
-  .logo-ferber
-  {
-    display: none;
-  }
-  .sideBar
-  {
-    display: none;
-  }
-  .design
-  {
-    display: none;
-  }
-  .main-container{
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    margin-left: 0;
-    padding: 10px 0px 24px 0px;
-  }
-  .toggle-group-buttons{
-    display: none;
-  }
-  .display-none{
-    display: block;
-  }
 }
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-dark: #0a0a0a;
-    --foreground-white: #ededed;
-  }
-}
-

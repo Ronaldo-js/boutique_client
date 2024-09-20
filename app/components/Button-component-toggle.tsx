@@ -1,7 +1,7 @@
 import { faBars } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
 import { FontAwesomeIcon } from '@/node_modules/@fortawesome/react-fontawesome/index';
 import { useContext } from 'react';
-import { SideBarContext } from './SideBar-context';
+import { SideBarContext } from './SideBar-component-context';
 
 // Fonction pour basculer l'état du SideBar
 

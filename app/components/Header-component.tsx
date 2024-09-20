@@ -5,7 +5,7 @@ import { faBars, faBell } from "@fortawesome/free-solid-svg-icons"; // Import fa
 import Ferber from '../img/FERBER-ENTERPRISE.svg';
 
 import Image from 'next/image';
-import ButtonToogle from "./Button-toggle";
+import ButtonToogle from "./Button-component-toggle";
 import StoreButtonsComponent from "./Store-Buttons-component";
 
 const Header: React.FC = () => {
