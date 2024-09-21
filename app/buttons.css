@@ -114,15 +114,19 @@ pr-3{
     color: #333; /* White text */
     padding: 6px 11px; /* Padding for a balanced button */
     border-radius: 0.4rem; /* Rounded corners */
-    border: none; /* No border */
     font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
+    font-weight: 520; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    color: #000;border:1px solid rgba(0, 0, 0, 0.09)
+    color: #000;border:1px solid rgba(0, 0, 0, 0.19);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.02); */
 }
 .btn-light:hover {
     background-color: #f6f6f6;
-    color: #000;border:1px solid rgba(0, 0, 0, 0.09)
+    color: #000;
+    border:1px solid rgba(0, 0, 0, 0.19);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.25);
 }
 .btn-light:active {
     transform: translateY(0); /* Reset to defaults when clicked */
@@ -144,24 +148,24 @@ pr-3{
     color: var(--text-dark-muted); /* White text */
     padding: 6px 10px; /* Padding for a balanced button */
     border-radius: 0.4rem; /* Rounded corners */
-    border: none; /* No border */
     font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
+    font-weight: 520; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    border:1px solid rgba(25, 25, 25, 0.1)
+    border:1px solid rgba(25, 25, 25, .19);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.25);
 
 }
 
 .btn-secondary:hover {
-    background-color: #cacaca;
+    background-color: #cacaca66;
     color: var(--text-dark-muted);
-    border:1px solid rgba(25, 25, 25, 0.1)
+    border:1px solid rgba(25, 25, 25, .29)
 
 }
 .btn-secondary:active {
     transform: translateY(0); /* Reset to defaults when clicked */
     background-color: #ececec; /* Even darker color when clicked */
-    border:1px solid rgba(25, 25, 25, 0.1)
+    border:1px solid rgba(25, 25, 25, .25)
 
 }
 .btn-secondary:disabled {
@@ -178,24 +182,26 @@ pr-3{
     color: #fff; /* White text */
     padding: 6px 10px; /* Padding for a balanced button */
     border-radius: 0.4rem; /* Rounded corners */
-    border: none; /* No border */
     font-size: 14px; /* Font size */
-    font-weight: bold; /* Bold text */
+    font-weight: 520; /* Bold text */
     cursor: pointer; /* Pointer cursor */
-    border:1px solid rgba(254, 254, 254, 0.09)
+    border:1px solid rgba(254, 254, 254, 0.19);
+    
 }
 
 /* Hover effect */
 .btn-defaults:hover {
     background-color: #000; /* Darker background on hover */
-    border:1px solid rgba(254, 254, 254, 0.1)
+    border:1px solid rgba(254, 254, 254, .39);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.25);
 }
 
 /* Active state (when clicking) */
 .btn-defaults:active {
     transform: translateY(0); /* Reset to defaults when clicked */
     background-color: #222; /* Even darker color when clicked */
-    border:1px solid rgba(254, 254, 254, 0.12)
+    border:1px solid rgba(254, 254, 254, 0.19);
+    /* border-bottom: 1px solid  rgba(0, 0, 0, 0.25); */
 
 }
 
@@ -212,7 +218,6 @@ pr-3{
     padding: 10px 20px;
     background-color: #0070f3;
     color: white;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
   } */

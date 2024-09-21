@@ -1,52 +1,16 @@
-'use client';
-import Button from "@/app/components/Buttons-component";
-import ButtonPopUp from "@/app/components/Buttons-component-pop-up";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect, useRef } from "react";
-import "../../buttons.css";
-import "../../globals.css";
-import ProductTable from "@/app/components/Product-component-table";
+import React from "react";
+import ButtonPopUp from "./Buttons-component-pop-up";
 
-const Product = () => {
-  const [expanded, setExpanded] = useState(false);
-  
-  // Référence pour le div qui doit être togglé
-  const divRef = useRef(null);
-
-  // Fonction pour toggler l'affichage du div
-  const toggleDiv = () => {
-    setExpanded(!expanded);
-  };
-
-  // Fonction pour masquer le div si un clic est fait en dehors
-  const handleClickOutside = (event) => {
-    if (divRef.current && !divRef.current.contains(event.target)) {
-      setExpanded(false);
-    }
-  };
-
-  useEffect(() => {
-    // Ajoute un écouteur de clic sur tout le document
-    document.addEventListener('click', handleClickOutside);
-    
-    // Nettoie l'écouteur lors du démontage du composant
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
-
-  return (
-    <> 
-      <div className="command-container">
+const ButtonHeadsComponent = (titleh1, ButtonPopUp, Button, orders, drafs, products, iventory, puchase, transfers, gift) =>{
+    return <>
         <div className="div-button-container">
           <div className="div-button-container-1 flex">
-            <h1>Product</h1>
+            <h1>{titleh1}</h1>
             <div className="button-item flex">
               {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
               <div 
-                ref={divRef} // Attache la référence au div à masquer
-                className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
+                 // Attache la référence au div à masquer
+                className={`display-none-collapsed collapsable-menu`}
               >
                 <ButtonPopUp />
               </div>
@@ -90,10 +54,7 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <ProductTable/>
-      </div>
     </>
-  );
-};
+}
 
-export default Product;
+export default ButtonHeadsComponent;
