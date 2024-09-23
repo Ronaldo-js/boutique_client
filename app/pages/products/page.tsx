@@ -1,22 +1,44 @@
 'use client';
-import Button from "@/app/components/Buttons-component";
+
+import { useState, useEffect, useRef } from "react";
+import ButtonHeadsComponent from "@/app/components/Button-heads-compenent";
 import ButtonPopUp from "@/app/components/Buttons-component-pop-up";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect, useRef } from "react";
 import "../../buttons.css";
 import "../../globals.css";
 import ProductTable from "@/app/components/Product-component-table";
 
+// Création des composants boutons individuels
+const ButtonMoreAction = () => (
+  <button className="btn-secondary m-1 pr-1 btn-chevron-down">
+    <FontAwesomeIcon icon={faChevronDown} /> More actions
+  </button>
+);
+
+const ButtonImport = () => (
+  <button className="btn-secondary m-1">Import</button>
+);
+
+const ButtonExport = () => (
+  <button className="btn-secondary m-1">Export</button>
+);
+
+const AddProductButton = () => (
+  <button className="btn-defaults m-1">Add Product</button>
+);
+
 const Product = () => {
   const [expanded, setExpanded] = useState(false);
-  
+
   // Référence pour le div qui doit être togglé
   const divRef = useRef(null);
+
 
   // Fonction pour toggler l'affichage du div
   const toggleDiv = () => {
     setExpanded(!expanded);
+    console.log(expanded);
   };
 
   // Fonction pour masquer le div si un clic est fait en dehors
@@ -39,58 +61,31 @@ const Product = () => {
   return (
     <> 
       <div className="command-container">
-        <div className="div-button-container">
-          <div className="div-button-container-1 flex">
-            <h1>Product</h1>
-            <div className="button-item flex">
-              {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
-              <div 
-                ref={divRef} // Attache la référence au div à masquer
-                className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
-              >
-                <ButtonPopUp />
-              </div>
+        <div className="button-item">
+          <ButtonHeadsComponent
+            titleh1="product" // Le titre gère quel bouton afficher pour "Add"
+            ButtonMoreAction={ButtonMoreAction} // Le bouton "More actions"
+            ButtonImport={ButtonImport}        // Le bouton "Import"
+            ButtonExport={ButtonExport}        // Le bouton "Export"
+            ButtonPopUp={ButtonPopUp}          // Le pop-up
+            ButtonToggleState={() => (
+              <button className="btn-secondary mx-2" onClick={toggleDiv}>
+                ...
+              </button>
+            )}                                // Le bouton pour toggler le menu
+            addProduct={AddProductButton}      // Le bouton "Add Product" spécifique pour les produits
+          />
 
-              <div className="group-menu display-none">
-                {/* Le bouton qui toggle l'état */}
-                <Button 
-                  className="btn-secondary mx-2" 
-                  label={"..."} 
-                  onClick={toggleDiv} />
-              </div>
-
-              <div className="flex toggle-group-buttons">
-                <div className="export">
-                  <Button 
-                    className="btn-secondary m-1" 
-                    label="Export" 
-                    onClick={() => { /* Logique du bouton */ }} /> 
-                </div>
-                <div className="import">
-                  <Button 
-                    className="btn-secondary m-1" 
-                    label="Import" 
-                    onClick={() => { /* Logique du bouton */ }} />
-                </div>
-                <div className="more_action">
-                  <Button 
-                    className="btn-secondary m-1 pr-1 btn-chevron-down" 
-                    icon={faChevronDown}
-                    label=" More actions" 
-                    onClick={() => { /* Logique du bouton */ }} />
-                </div>
-              </div>
-
-              <div className="add_product">
-                <Button 
-                  className="btn-defaults m-1" 
-                  label="Add Product" 
-                  onClick={() => { /* Logique du bouton */ }} />
-              </div>
-            </div>
+          {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
+          <div 
+             //ref={divRef} Attache la référence au div à masquer
+            className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
+          >
+            <ButtonPopUp />
           </div>
         </div>
-        <ProductTable/>
+        
+        <ProductTable />
       </div>
     </>
   );

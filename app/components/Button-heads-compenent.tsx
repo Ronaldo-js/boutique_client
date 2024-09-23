@@ -1,60 +1,93 @@
 import React from "react";
-import ButtonPopUp from "./Buttons-component-pop-up";
 
-const ButtonHeadsComponent = (titleh1, ButtonPopUp, Button, orders, drafs, products, iventory, puchase, transfers, gift) =>{
-    return <>
-        <div className="div-button-container">
-          <div className="div-button-container-1 flex">
-            <h1>{titleh1}</h1>
-            <div className="button-item flex">
-              {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
-              <div 
-                 // Attache la référence au div à masquer
-                className={`display-none-collapsed collapsable-menu`}
-              >
-                <ButtonPopUp />
-              </div>
+// Typage des props du composant
+interface ButtonHeadsComponentProps {
+  titleh1: string;
+  ButtonMoreAction?: React.ComponentType;
+  ButtonImport?: React.ComponentType;
+  ButtonExport?: React.ComponentType;
+  ButtonPopUp?: React.ComponentType;
+  ButtonAdd?: React.ComponentType;
+  ButtonToggleState?: React.ComponentType;
+  addProduct?: React.ComponentType;
+  addContent?: React.ComponentType;
+  addCustomer?: React.ComponentType;
+  createOrders?: React.ComponentType;
+  createDrafts?: React.ComponentType;
+  createInventory?: React.ComponentType;
+  createPurchase?: React.ComponentType;
+  createTransfers?: React.ComponentType;
+  createGift?: React.ComponentType;
+}
 
-              <div className="group-menu display-none">
-                {/* Le bouton qui toggle l'état */}
-                <Button 
-                  className="btn-secondary mx-2" 
-                  label={"..."} 
-                  onClick={toggleDiv} />
-              </div>
+const ButtonHeadsComponent: React.FC<ButtonHeadsComponentProps> = ({
+  titleh1,
+  ButtonMoreAction,
+  ButtonImport,
+  ButtonExport,
+  ButtonPopUp,
+  ButtonAdd,
+  ButtonToggleState,
+  addProduct,
+  addContent,
+  addCustomer,
+  createOrders,
+  createDrafts,
+  createInventory,
+  createPurchase,
+  createTransfers,
+  createGift,
+}) => {
 
-              <div className="flex toggle-group-buttons">
-                <div className="export">
-                  <Button 
-                    className="btn-secondary m-1" 
-                    label="Export" 
-                    onClick={() => { /* Logique du bouton */ }} /> 
-                </div>
-                <div className="import">
-                  <Button 
-                    className="btn-secondary m-1" 
-                    label="Import" 
-                    onClick={() => { /* Logique du bouton */ }} />
-                </div>
-                <div className="more_action">
-                  <Button 
-                    className="btn-secondary m-1 pr-1 btn-chevron-down" 
-                    icon={faChevronDown}
-                    label=" More actions" 
-                    onClick={() => { /* Logique du bouton */ }} />
-                </div>
-              </div>
+  // Mappage des titres avec les boutons d'ajout ou de création
+  const buttonMapping: { [key: string]: React.ComponentType | undefined } = {
+    product: addProduct,
+    content: addContent,
+    customer: addCustomer,
+    orders: createOrders,
+    drafts: createDrafts,
+    inventory: createInventory,
+    purchase: createPurchase,
+    transfers: createTransfers,
+    gift: createGift,
+  };
 
-              <div className="add_product">
-                <Button 
-                  className="btn-defaults m-1" 
-                  label="Add Product" 
-                  onClick={() => { /* Logique du bouton */ }} />
+  // Récupération du bouton associé au titre (par défaut null si pas de correspondance)
+  const ButtonAddOrCreate = buttonMapping[titleh1.toLowerCase()] || null;
+
+  return (
+    <>
+      <div className="div-button-container">
+        <div className="div-button-container-1 flex">
+          <h1>{titleh1}</h1>
+          <div className="button-item flex">
+            {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
+            <div className={`display-none-collapsed collapsable-menu`}>
+              {ButtonPopUp && <ButtonPopUp />}
+            </div>
+
+            <div className="group-menu display-none">
+              {/* Le bouton qui toggle l'état */}
+              {ButtonToggleState && <ButtonToggleState />}
+            </div>
+
+            <div className="flex toggle-group-buttons">
+              <div className="export">{ButtonExport && <ButtonExport />}</div>
+              <div className="import">{ButtonImport && <ButtonImport />}</div>
+              <div className="more_action">
+                {ButtonMoreAction && <ButtonMoreAction />}
               </div>
+            </div>
+
+            <div className="add_product">
+              {/* Affichage du bouton "add" ou "create" selon le titleh1 */}
+              {ButtonAddOrCreate && <ButtonAddOrCreate />}
             </div>
           </div>
         </div>
+      </div>
     </>
-}
+  );
+};
 
 export default ButtonHeadsComponent;

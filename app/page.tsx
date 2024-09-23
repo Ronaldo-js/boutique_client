@@ -39,14 +39,6 @@ export default function Home() {
             title="Setup guide"
             description="Use this personalized guide to get your store up and running."
 
-            Button={()=>(
-              <Button
-                icon={faCheck}
-                className="btn-secondary"
-                label={" Done"}
-                type="button"
-                />
-            )}
             ImageComponent={()=>(
               <Image
                 src={imageCar}
@@ -68,7 +60,7 @@ export default function Home() {
             
             DismissButton = {()=>(
               <Button
-                label={"tsara be ny affichage"}
+                label={"Dismiss guide"}
                 className ="btn-light"
                 type="button"
               />
