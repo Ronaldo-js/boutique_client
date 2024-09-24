@@ -8,10 +8,11 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../buttons.css";
 import "../../globals.css";
 import ProductTable from "@/app/components/Product-component-table";
+import { faEye } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
 
 // Création des composants boutons individuels
 const ButtonMoreAction = () => (
-  <button className="btn-secondary m-1 pr-1 btn-chevron-down">
+  <button className="btn-secondary m-1 btn-chevron-down">
     <FontAwesomeIcon icon={faChevronDown} /> More actions
   </button>
 );
@@ -63,7 +64,7 @@ const Product = () => {
       <div className="command-container">
         <div className="button-item">
           <ButtonHeadsComponent
-            titleh1="product" // Le titre gère quel bouton afficher pour "Add"
+            titleh1="Product" // Le titre gère quel bouton afficher pour "Add"
             ButtonMoreAction={ButtonMoreAction} // Le bouton "More actions"
             ButtonImport={ButtonImport}        // Le bouton "Import"
             ButtonExport={ButtonExport}        // Le bouton "Export"
@@ -81,10 +82,15 @@ const Product = () => {
              //ref={divRef} Attache la référence au div à masquer
             className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
           >
-            <ButtonPopUp />
+            <ButtonPopUp 
+              buttonExport={"Export"}
+              buttonMoreAction={"More action"}
+              buttonImport={"Import"}
+              buttonIcon = {"Show analytics bar"}
+              icon = {faEye}
+            />
           </div>
         </div>
-        
         <ProductTable />
       </div>
     </>

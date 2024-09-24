@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg-black: #000000;
   --bg-dark: #1a1a1a;
@@ -179,6 +183,15 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
   0 1px 3px rgba(0, 0, 0, 0.08);
 }
+.pop-up-buttons{
+  display: flex;
+  background-color: #ffffff;
+  /* width: 150px; */
+  /* align-items: center; */
+  border-radius: .8rem;
+  /* padding: .5rem; */
+  /* position: absolute; */
+}
 .pop-up-buttons>ul>li:hover{
   background-color: #d0cfcf70;
   border-radius: 0.1rem;
@@ -209,15 +222,6 @@ pop-up-buttons>ul>li:nth-last-child():hover{
   display: flex;
   /* width: 180px; */
   flex-direction: column;
-}
-.pop-up-buttons{
-  display: flex;
-  background-color: #EBEBEB;
-  /* width: 150px; */
-  /* align-items: center; */
-  border-radius: .8rem;
-  /* padding: .5rem; */
-  /* position: absolute; */
 }
 .group-menu{
   align-self: center
@@ -321,6 +325,9 @@ body {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.div-button-container{
+  margin: 1.5rem 0;
 }
 .div-button-container-1{
   justify-content: space-between;

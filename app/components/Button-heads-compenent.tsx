@@ -26,7 +26,6 @@ const ButtonHeadsComponent: React.FC<ButtonHeadsComponentProps> = ({
   ButtonImport,
   ButtonExport,
   ButtonPopUp,
-  ButtonAdd,
   ButtonToggleState,
   addProduct,
   addContent,
@@ -37,6 +36,7 @@ const ButtonHeadsComponent: React.FC<ButtonHeadsComponentProps> = ({
   createPurchase,
   createTransfers,
   createGift,
+  ButtonAdd,
 }) => {
 
   // Mappage des titres avec les boutons d'ajout ou de création
