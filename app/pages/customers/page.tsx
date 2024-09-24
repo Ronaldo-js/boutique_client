@@ -30,13 +30,13 @@ const Customers = ()=>{
   
   return<> 
         <div className="command-container">
-          <div className="div-button-container">
+          <div className="button-item">
             <ButtonHeadsComponent
               titleh1="Customer"
               // ButtonImport= {AddCustomerButton}
               ButtonExport= {ButtonExport}
               ButtonImport= {ButtonImport}
-              // ButtonPopUp={ButtonPopUp}
+              ButtonPopUp={ButtonPopUp}
               ButtonToggleState={() => (
                 <button className="btn-secondary mx-2" onClick={toggleDiv}>
                   ...
@@ -45,6 +45,18 @@ const Customers = ()=>{
               addCustomer={CreateOrderstButton} 
               // addCustomer={AddCustomerButton}
             />
+
+            {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
+          <div 
+             //ref={divRef} Attache la référence au div à masquer
+            className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
+          >
+            <ButtonPopUp 
+              buttonExport={"Export"}
+              buttonImport = {"Import"}
+            />
+          </div>
+            
           </div>
         </div>
       </>
