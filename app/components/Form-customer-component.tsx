@@ -125,7 +125,6 @@ const FormCustomer = () =>{
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="flex flex-col p-4">
                                     <label className="block" htmlFor="Phone">Phone </label>
                                     <div className="flex  gap-3 justify-between">
