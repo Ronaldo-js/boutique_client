@@ -7,26 +7,40 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../buttons.css";
 import "../../globals.css";
-import ProductTable from "@/app/components/Product-component-table";
+import TableCell from "@/app/components/Table-component";
 import { faEye } from "@/node_modules/@fortawesome/free-regular-svg-icons/index";
+import Button from "@/app/components/Buttons-component";
 
 // Création des composants boutons individuels
 const ButtonMoreAction = () => (
-  <button className="btn-secondary m-1 btn-chevron-down">
-    <FontAwesomeIcon icon={faChevronDown} /> More actions
-  </button>
+
+  <Button
+    label={"More actions"}
+    className ={`bg-gray-200 hover:bg-gray-300 focus:ring-gray-400`}
+    icon={faChevronDown}
+  
+  />
 );
 
 const ButtonImport = () => (
-  <button className="btn-secondary m-1">Import</button>
+  <Button
+      label={"Import"}
+      className= {`bg-gray-200 hover:bg-gray-300 focus:ring-gray-400`}
+    />
 );
 
 const ButtonExport = () => (
-  <button className="btn-secondary m-1">Export</button>
+  <Button
+    label={"Export"}
+    className= {`bg-gray-200 hover:bg-gray-300 focus:ring-gray-400`}
+  />
 );
 
 const AddProductButton = () => (
-  <button className="btn-defaults m-1">Add Product</button>
+  <Button
+    label={"Add Product"}
+    className= {`bg-gray-950 text-white hover:bg-gray-800 focus:ring-gray-100`}
+  />
 );
 
 const Product = () => {
@@ -80,7 +94,7 @@ const Product = () => {
           {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
           <div 
              //ref={divRef} Attache la référence au div à masquer
-            className={`display-none-collapsed collapsable-menu ${expanded ? 'show' : ''}`}
+            className={`hidden ${expanded ? 'show' : ''}`}
           >
             <ButtonPopUp 
               buttonExport={"Export"}
@@ -91,7 +105,7 @@ const Product = () => {
             />
           </div>
         </div>
-        <ProductTable />
+        <TableCell />
       </div>
     </>
   );

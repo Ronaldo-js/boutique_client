@@ -24,7 +24,7 @@ const SubMenuItem = ({ item }:{ item: ISubItem })=>{
 
     return(
         <li 
-            className={`${isActive && "active-sub"} sidebar-sub-menu`}
+            className={`${isActive && "font-semibold text-slate-800"} ml-4 rounded-md cursor-pointer  hover:bg-lightgray_hover_antokiniaina p-2 `}
             onClick={onClick}
         >{name}</li>
     )

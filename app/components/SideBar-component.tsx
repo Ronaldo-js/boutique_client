@@ -1,14 +1,14 @@
 "use client";
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { faBagShopping, faBullseye, faCartShopping, faHome, faPercent, faReceipt, faUser, faStoreAlt, faGear } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
+import { faBagShopping, faBullseye, faCartShopping, faHome, faPercent, faReceipt, faUser, faStoreAlt, faGear, faBars } from '@/node_modules/@fortawesome/free-solid-svg-icons/index';
 import React, { useContext, useState } from 'react';
 import { faBarChart, faSadCry } from '@/node_modules/@fortawesome/free-regular-svg-icons/index';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@/node_modules/@fortawesome/react-fontawesome/index';
 import SideBarItem from './SideBarItem-component';
 import { faAppStoreIos } from '@/node_modules/@fortawesome/free-brands-svg-icons/index';
 import Header from './Header-component';
-import { SideBarContext } from './SideBar-component-context';
+import { SideBarContext } from './context/SideBar-component-context';
 
 interface ISideBarItem{
     name: string;
@@ -135,29 +135,29 @@ const items: ISideBarItem[] = [
 
 ]
 
-
 const SideBar= ()=>{
-    const { showSideBar } = useContext(SideBarContext);
+const {showSidebar} = useContext(SideBarContext);
     return(<><div
-                className={`sideBar  ${showSideBar ? 'show' : ''}`}
+
+                className={`p-6 fixed bg-lightgray_sidebar h-screen z-20 top-16   lg:w-64 lg:left-0 peer-focus:left-0 peer:transition ease-out duration-200 ${showSidebar ? "left-0":"-left-96"}`}
                 >
                         <ul>
                             {items.map(item=>(
                             <SideBarItem key={item.path} item = {item}/>       
                             ))}
                         </ul>
-                        <div className='espacement-sidebar'> {/* 50vh  */}
-                            <div className="container-sales-channels">
-                                <h3>Sales Channels</h3>
+                        <div className='my-10'> {/* 50vh  */}
+                            <div className="mb-6">
+                                <h3 className='text-ti'>Sales Channels</h3>
                                 <ul>
-                                    <li> <FontAwesomeIcon icon={faStoreAlt}/> Online Store</li>
-                                    <li><FontAwesomeIcon icon={faAppStoreIos}/> Point of Sale</li>
+                                    <li className='p-3 cursor-pointer'> <FontAwesomeIcon icon={faStoreAlt}/> Online Store</li>
+                                    <li className='p-3 cursor-pointer'><FontAwesomeIcon icon={faAppStoreIos}/> Point of Sale</li>
                                 </ul>
                             </div>
                             <div className="container-apps">
-                                <h3>Apps</h3>
+                                <h3 className=''>Apps</h3>
                                     <ul>
-                                        <li><FontAwesomeIcon icon={faGear}/>Setting</li>
+                                        <li className='p-3 cursor-pointer'><FontAwesomeIcon icon={faGear}/>Setting</li>
                                     </ul>
                             </div>
                         </div>

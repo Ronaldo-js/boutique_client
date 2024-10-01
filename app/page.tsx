@@ -6,6 +6,7 @@ import "./buttons.css";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import imageCar from "./img/corten.png"
+import imageShop from "./img/shop.jpg"
 // import imageCar from 'next/image';
 import HomeComponent from "./components/Home-component";
 import Button from "./components/Buttons-component";
@@ -30,9 +31,9 @@ export default function Home() {
   // }, []);
   
   return (
-    <div  className="section-container-home">
-      <div className="section-container-home-datas">
-        <div className="section-container-home-data">
+    <div  className="w-ful grid grid-cols-1 place-items-center">
+      <div className=" max-w-5xl ">
+        <div className="rounded-lg bg-gray-50 shadow-sm mb-4">
           {/* <h1>Message du backend :</h1>
           <p>{message}</p> */}
           <HomeComponent
@@ -41,18 +42,19 @@ export default function Home() {
 
             ImageComponent={()=>(
               <Image
-                src={imageCar}
+                src={imageShop}
                 alt="Shopify +"
                 width={116}
                 height={36}
                 priority
+                className="object-fill h-28 w-48 rounded-lg"
               />
             )}
 
             Button={()=>(
               <Button
                 icon={faCheck}
-                className="btn-light"
+                className="px3 py2 bg-white shadow-sm border-b border-solid border-slate-100 hover:bg-slate-50 hover:border-slate-300"
                 label={" Done"}
                 type="button"
                 />
@@ -68,7 +70,7 @@ export default function Home() {
 
           />
         </div>
-        <div className="section-container-home-data">
+        <div className=" rounded-lg bg-gray-50 shadow-sm mb-4">
           <HomeComponent
             title={"Get inspired to launch your business"}
             description = "lorem ispsum dollar sit ammet lecli cilar  "        
@@ -82,7 +84,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="section-container-home-data">
+        <div className=" rounded-lg bg-gray-50 shadow-sm mb-4 ">
           <HomeComponent
             title={"Write product descriptions in seconds"}
             description = "Automatically generate unique 

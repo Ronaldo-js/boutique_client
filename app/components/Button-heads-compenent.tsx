@@ -57,33 +57,35 @@ const ButtonHeadsComponent: React.FC<ButtonHeadsComponentProps> = ({
 
   return (
     <>
-      <div className="div-button-container">
-        <div className="div-button-container-1 flex">
-          <h1>{titleh1}</h1>
-          <div className="button-item flex">
-            {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
-            <div className={`display-none-collapsed collapsable-menu`}>
-              {ButtonPopUp && <ButtonPopUp />}
-            </div>
+      <div className=" md:content-center mb-4 content-center sm:content-center ">
+        <div className="justify-between flex md:content-center items-center sm:item-center">
+          <h1 className="text-xl font-bold">{titleh1}</h1>
+          {ButtonPopUp && ButtonExport &&
+            <div className="button-item flex ">
+              {/* La div est togglée selon l'état expanded, elle est cachée lorsqu'on clique à l'extérieur */}
+              <div className={``}>
+                {ButtonPopUp && <ButtonPopUp />}
+              </div>
 
-            <div className="group-menu display-none">
-              {/* Le bouton qui toggle l'état */}
-              {ButtonToggleState && <ButtonToggleState />}
-            </div>
+              <div className=" content-center md:hidden lg:hidden 2xl:hidden">
+                {/* Le bouton qui toggle l'état */}
+                {ButtonToggleState && <ButtonToggleState />}
+              </div>
 
-            <div className="flex toggle-group-buttons">
-              <div className="export">{ButtonExport && <ButtonExport />}</div>
-              <div className="import">{ButtonImport && <ButtonImport />}</div>
-              <div className="more_action">
-                {ButtonMoreAction && <ButtonMoreAction />}
+              <div className="hidden md:block lg:block 2xl:block">
+                <span className="export ">{ButtonExport && <ButtonExport />}</span>
+                <span className="import ">{ButtonImport && <ButtonImport />}</span>
+                <span className="more_action ">
+                  {ButtonMoreAction && <ButtonMoreAction />}
+                </span>
+              </div>
+
+              <div className="add_product">
+                {/* Affichage du bouton "add" ou "create" selon le titleh1 */}
+                {ButtonAddOrCreate && <ButtonAddOrCreate />}
               </div>
             </div>
-
-            <div className="add_product">
-              {/* Affichage du bouton "add" ou "create" selon le titleh1 */}
-              {ButtonAddOrCreate && <ButtonAddOrCreate />}
-            </div>
-          </div>
+          }
         </div>
       </div>
     </>

@@ -55,11 +55,11 @@ const SideBarItem = ({ item }: { item: ISideBarItem}) => {
     return <>
         <li 
             onClick={onClick}  
-            className={`${isActive && "active"}`}   
+            className={`${isActive && "font-semibold  bg-lightgray_active_antokiniaina"} relative cursor-pointer p-2  hover:bg-lightgray_hover_antokiniaina hover:text-neutral-950  transition-colors duration-200  rounded-md`}   
         >
             <FontAwesomeIcon icon={icon} /> {name}
             {items && items.length>0 &&(
-                <FontAwesomeIcon className='chevron-down' icon={expanded?faChevronUp:faChevronDown} fontSize={10}/>
+                <FontAwesomeIcon className='absolute right-2 top-2.5' icon={expanded?faChevronUp:faChevronDown} fontSize={10}/>
             )}
         </li>
             {expanded && 
